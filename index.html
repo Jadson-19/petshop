@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <link rel="icon" href="./images/selfie_macaco.jpg" type="image/png">
+    <title>Gerenciador de Pets</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>Gerenciador de Pets</h1>
+            <p><span class="span">Com esse painel de gerenciamento, o tutor conseguirá acompanhar todo o andamento da
+                    vida do seu Pet em
+                    tempo real, todo o controle será atualizado a cada consulta do seu bichinho aqui em nossa
+                    clínica.</span></p>
+
+        </header>
+
+        <section>
+
+            <div class="comercial">
+
+                <h2>SMART PETS, SEU ANIMAL EM BOAS MÃOS.</h2>
+                <h3>Endereço: Rua Velha, nº 120. <br> Bairro da Boa Vista, Recife-PE. <br> Telefone pra contato: 81
+                    3665-9875.</h3>
+                <div>
+
+                    <div class="painel">
+
+                        <img class="cachorroGato" src="./images/cachorro_e_gato.jpeg.jpeg" type="image">
+                        <img class="pets" src="./images/pets_juntos.png.png" type="image">
+
+                       
+
+                        <form id="formulario">
+
+                            <input class="tutor" name="tutor" type="text" placeholder="Nome do Tutor" required> <br>
+                            <input class="mascote" name="mascote" type="text" placeholder="Nome do Pet" required> <br>
+                            <input class="idade" name="idade" maxlength="4" type="tel" placeholder="Idade do Pet" required><br>
+                            <input class="raça" name="raça" type="text" placeholder="Raça" required> <br>
+                            <input class="peso" name="peso" maxlength="3" type="tel" placeholder="Peso" required><br>
+                            <input class="email" name="email" type="email" placeholder="Digite seu e-mail" required> <br>  
+                            
+                            <input class="senha" id="passRegistro" name="senha" type="password" maxlength="10"placeholder="Crie sua senha" required><br>
+                            <img id="olhoRegistro" class="olhoRegistro" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" onclick="mostrarSenha()">
+                            
+                            <input class="confirmarSenha" id="passconfirmarRegistro" name="confirmarSenha" type="password" maxlength="10" placeholder="Confirmar senha" required><br><br>
+                            <img id="olhoconfirmarRegistro" class="olhoconfirmarRegistro" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" onclick="mostrarconfirmarSenha()">
+                           
+                            <input class="button" type="submit" name="register" value="CADASTRAR PET" onclick="calcularCadastro()">
+
+                        </form>
+
+                    
+
+                        <div id="verificarCadastro"></div>
+
+                    </div>
+
+                    <div class="consulta">
+
+                        <img class="preguiça" src="./images/bicho_preguiça.jpeg" type="image">
+                        <img class="macaco" src="./images/selfie_macaco.jpg" type="image">
+
+                        <form id="coleta">
+
+                        <input class="consultaEmail" name="loginEmail" type="email" placeholder="Digite seu e-mail" required><br><br>
+                        <input class="consultaSenha" id="passConsulta" name="loginSenha" type="password" maxlength="10" placeholder="Insira sua senha" required> <br>
+
+                        <img id="olhoConsulta" class="olhoConsulta"
+                                src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"
+                                onclick="mostrarPassword()">
+
+                            <input id="buttonConsulta" name="login" type="reset" value="CONSULTAR" onclick="calcularConsulta()">
+
+                        </form>
+
+                        <div id="verificarConsulta"></div>
+                        <div id="resultadosConsulta"></div>
+                    </div>
+
+        </section>
+
+        <footer>
+
+            <p>Smart Pets</p>
+            <p>Para maiores informações - clique no link abaixo para visualizar nossas redes sociais:</p>
+            <div class="social">
+                <a href="https://www.facebook.com/JadsonSouzaSCR"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/jadson.souzza/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/jadson-souza-a6a130224/"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="fim">© 2022 Copyright by Jadson Souza</p>
+
+        </footer>
+
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        
+        <script src="./script/app.js"></script>
+
+    </div>
+
+
+
+</body>
+
+</html>
